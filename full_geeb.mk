@@ -14,12 +14,12 @@
 # limitations under the License.
 
 # Get the long list of APNs
-$(call inherit-product-if-exists, vendor/omni/config/gsm.mk)
+$(call inherit-product-if-exists, vendor/slim/config/gsm.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := full_geeb
+PRODUCT_NAME := slim_geeb
 PRODUCT_DEVICE := geeb
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Optimus G
@@ -28,4 +28,4 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/geeb/device.mk)
-$(call inherit-product-if-exists, vendor/lge/gee/gee-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/geeb/gee-vendor.mk)

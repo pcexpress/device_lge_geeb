@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inline kernel building
+TARGET_KERNEL_SOURCE := kernel/lge/gee
 TARGET_KERNEL_CONFIG := geeb_defconfig
 
 # inherit from gee-common
@@ -21,4 +23,9 @@ TARGET_KERNEL_CONFIG := geeb_defconfig
 TARGET_OTA_ASSERT_DEVICE := geeb_att,geeb,geeb_att_us,e970,geeb_att_us,geeb_ca,geebus,mako
 
 # inherit from the proprietary version
--include vendor/lge/gee/BoardConfigVendor.mk
+-include vendor/lge/geeb/BoardConfigVendor.mk
+
+USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY:= true
+
+
+
